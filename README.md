@@ -51,6 +51,7 @@ paginate = 3
   favicon = "/icons/favicon.png"
   mainSections = ["posts", "photos"]
   email = "mail@example.com"
+  smart_email_link = ["Email"]
   about = """
 About section. Enter details about you here.
 """
