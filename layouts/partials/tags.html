@@ -1,6 +1,6 @@
 {{ with .Params.tags }}
     <div class="tags">
-        <span title="Tags">🏷</span>
+        <span id="tag-icon"></span>
         <div class="horizontal-links links">
             {{ range . }}{{ with $.Site.GetPage (printf "/tags/%s" ( . | urlize)) }}<a href="{{ .RelPermalink }}">#&hairsp;{{ .Title }}</a>{{ end }}{{ end }}
         </div>
