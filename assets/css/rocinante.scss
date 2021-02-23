@@ -106,12 +106,15 @@ pre, code {
   font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
   border-radius: 10px;
 }
+
 code {
   background: #f9f9f9;
   font-size: 0.9em;
   padding: 0.25em 0.5em;
   color: #9E525A;
+  overflow-wrap: break-word;
 }
+
 pre code {
   background: #f9f9f9;
   display: block;
@@ -127,11 +130,13 @@ img, video {
   height: auto;
   border-radius: 3px;
 }
+
 figure {
   width: 100%;
   margin: 2em 0;
   text-align: center;
 }
+
 figcaption {
   p {
     margin: 0;
