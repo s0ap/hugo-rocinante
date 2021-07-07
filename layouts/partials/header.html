@@ -1,0 +1,12 @@
+<h2>
+  {{ if and (.IsHome) (not (.Scratch.Get "pagenumber")) }}
+    › {{ .Site.Title }}
+  {{ else }}
+    <a href="{{ .Site.BaseURL }}">‹ {{ .Site.Title }}</a>
+  {{ end }}
+</h2>
+<nav>
+  <a href="{{ .Site.BaseURL }}about">About</a> |
+  <a href="https://github.com/asdfgeoff/">Github</a> |
+  <a href="https://www.instagram.com/asdfgeoff/">Instagram</a>
+</nav>

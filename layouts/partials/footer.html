@@ -1,0 +1,10 @@
+{{ if not .IsNode }}
+  <div class="content-container">
+    <div class="content">
+      {{- partial "about.html" . -}}
+    </div>
+  </div>
+{{ end }}
+{{ if .Site.GoogleAnalytics }}
+{{ template "_internal/google_analytics_async.html" . }}
+{{ end }}

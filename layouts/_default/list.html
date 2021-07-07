@@ -1,0 +1,16 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+{{ range (where .Pages "Section" "kb") }}
+    {{ if gt (len .Pages) 0 }}
+    <h2>{{ .Title }}</h2>
+    {{ end }}
+<ul>
+    {{ range .Pages }}
+    <li class="post-short-list">
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </li>
+    {{ end }}
+</ul>
+{{ end }}
+{{ end }}
