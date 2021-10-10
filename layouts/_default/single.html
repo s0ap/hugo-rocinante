@@ -11,6 +11,7 @@
         <article class="content">
             {{ .Content }}
         </article>
+        {{ template "_internal/disqus.html" . }}
     </div>
 
 {{ end }}
