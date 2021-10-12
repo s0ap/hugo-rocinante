@@ -1,7 +1,7 @@
 {{ define "main" }}
 <h1>{{ .Title }}</h1>
 {{ .Content }}
-{{ range (where .Pages "Section" "kb") }}
+{{ range (where .Pages "Section" "notebooks") }}
     {{ if gt (len .Pages) 0 }}
     <h2>{{ .Title }}</h2>
     {{ end }}
