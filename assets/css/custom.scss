@@ -21,12 +21,28 @@ code.has-jax {
     }
 }
 
+/* List page → sub-title (incl. tags) */
+
 #tag-icon:before {
     content: url("/tag.png");
-    opacity: 30%;
+    opacity: 20%;
     position: relative;
     top: 3px;
+    zoom: 0.8;
 }
+
+.date {
+    display: inline-block;
+    padding-top: 5px;
+}
+
+.tags {
+    display: inline-block;
+    padding-top: 0 !important;
+    padding-left: 10px;
+}
+
+/* Header nav */
 
 nav img {
     vertical-align: text-bottom;
@@ -43,3 +59,4 @@ nav li {
     display: inline;
     margin-left: 12px !important;
 }
+
