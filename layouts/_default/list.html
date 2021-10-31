@@ -1,16 +1,10 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
-{{ .Content }}
-{{ range (where .Pages "Section" "notebooks") }}
-    {{ if gt (len .Pages) 0 }}
-    <h2>{{ .Title }}</h2>
+    <h1>{{ .Title }}</h1>
+    {{ range .Data.Pages }}
+        <div class="post-short-list">
+            <h3>
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+            </h3>
+        </div>
     {{ end }}
-<ul>
-    {{ range .Pages }}
-    <li class="post-short-list">
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-    </li>
-    {{ end }}
-</ul>
-{{ end }}
 {{ end }}
