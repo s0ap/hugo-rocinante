@@ -1,4 +1,20 @@
+<!-- 
 {{ define "main" }}
+
 <h1>404: Page not found</h1>
 <p>Why are you here? Who sent you? It's probably your fault anyway. Go back!</p>
+
+<p align="center">
+    {{ with .Site.Params.customError}}
+    <img src="{{ . | relURL }}" alt="404 not found" /> {{ end }}
+</p>
+
+{{ end }}
+ -->
+{{ define "main"}}
+    <main id="main">
+      <div>
+       <h1 id="title"><a href="{{ "/" | relURL }}">Go Home</a></h1>
+      </div>
+    </main>
 {{ end }}

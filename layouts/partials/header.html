@@ -9,10 +9,8 @@
   <ul>
     <li><a href="{{ .Site.BaseURL }}about">About</a></li>
     <li><a href="{{ .Site.BaseURL }}">Blog</a> </li>
-    <li><a href="{{ .Site.BaseURL }}/notebooks">Notebooks</a></li>
-    <li><a href="https://github.com/asdfgeoff/">
-      <img src="{{ .Site.BaseURL }}GitHub-Mark-32px.png" width="18" height="18"></a></li>
-    <li><a href="https://www.instagram.com/asdfgeoff/">
-      <img src="{{ .Site.BaseURL }}instagram.png" width="18" height="18" alt="Icon by flaticon.com/authors/edtim"></a></li>
+    <li><a href="https://github.com/s0ap/">
+      {{ with .Site.Params.githubicon}}
+      <img src="{{ . | relURL }}" width="18" height="18"></a></li> {{ end }}
   </ul>
 </nav>

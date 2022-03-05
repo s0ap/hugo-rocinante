@@ -1,3 +1,4 @@
+<!-- 
 {{ if not .IsNode }}
   <div class="content-container">
     <div class="content">
@@ -5,6 +6,13 @@
     </div>
   </div>
 {{ end }}
-{{ if .Site.GoogleAnalytics }}
-{{ template "_internal/google_analytics_async.html" . }}
-{{ end }}
+ -->
+{{ if .Params.katex}}{{ partial "katex.html" . }}{{ end }}
+
+<p align="center">
+  <a href="#top">Back to top</a> |
+  {{ with .Site.Params.GithubView}}
+  <a href='{{ . }}{{ $.Scratch.Get "FilePath" }}'>View source</a> {{ end }} | {{
+  with .Site.Params.GithubEdit}}
+  <a href='{{ . }}{{ $.Scratch.Get "FilePath" }}'>Edit source</a> {{ end }}
+</p>
