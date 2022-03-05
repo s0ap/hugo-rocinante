@@ -1,20 +1,22 @@
-<!-- 
 {{ define "main" }}
 
 <h1>404: Page not found</h1>
-<p>Why are you here? Who sent you? It's probably your fault anyway. Go back!</p>
+<p>
+    The page at
+    <code>
+    <script>
+      document.write(location.href);
+    </script>
+  </code> was not found. 
+</p>
+
+<p>Feeling confused? Please go ahead and send me an
+    <a href="mailto: vishadbhalodia@gmail.com">email</a> to notify me. It will be great if you could tell me the URL of the page and where/how you got this URL. Thanks!
+</p>
 
 <p align="center">
     {{ with .Site.Params.customError}}
     <img src="{{ . | relURL }}" alt="404 not found" /> {{ end }}
 </p>
 
-{{ end }}
- -->
-{{ define "main"}}
-    <main id="main">
-      <div>
-       <h1 id="title"><a href="{{ "/" | relURL }}">Go Home</a></h1>
-      </div>
-    </main>
 {{ end }}

@@ -9,8 +9,15 @@
   <ul>
     <li><a href="{{ .Site.BaseURL }}about">About</a></li>
     <li><a href="{{ .Site.BaseURL }}">Blog</a> </li>
-    <li><a href="https://github.com/s0ap/">
+<!-- 
+    <li><a href="{{ .Site.BaseURL }}/notebooks">Notebooks</a></li>
+ -->
+    <li><a href="https://github.coecis.cornell.edu/vmb39/">
       {{ with .Site.Params.githubicon}}
       <img src="{{ . | relURL }}" width="18" height="18"></a></li> {{ end }}
   </ul>
 </nav>
+
+{{ if not .Params.disable_scroll_indicator }}
+  {{ partial "readprogress_indicator.html" . }}
+{{ end }}

@@ -9,7 +9,15 @@
  -->
 {{ if .Params.katex}}{{ partial "katex.html" . }}{{ end }}
 
-{{ if .IsPage }}
+{{ if .File }} {{ if .Path }}
+  {{ $Rmd := (print .File.BaseFileName ".Rmd") }}
+
+{{ if (where (readDir (print "content/" .File.Dir)) "Name" $Rmd) }}
+  {{ $.Scratch.Set "FilePath" (print .File.Dir $Rmd) }}
+{{ else }}
+  {{ $.Scratch.Set "FilePath" .File.Path }}
+{{ end }}
+
 <p align="center">
   <a href="#top">Back to top</a> |
   {{ with .Site.Params.GithubView}}
@@ -17,4 +25,4 @@
   with .Site.Params.GithubEdit}}
   <a href='{{ . }}{{ $.Scratch.Get "FilePath" }}'>Edit source</a> {{ end }}
 </p>
-{{ end }}
+{{ end }} {{ end }}
