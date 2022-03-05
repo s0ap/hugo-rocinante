@@ -9,6 +9,7 @@
  -->
 {{ if .Params.katex}}{{ partial "katex.html" . }}{{ end }}
 
+{{ if .IsPage }}
 <p align="center">
   <a href="#top">Back to top</a> |
   {{ with .Site.Params.GithubView}}
@@ -16,3 +17,4 @@
   with .Site.Params.GithubEdit}}
   <a href='{{ . }}{{ $.Scratch.Get "FilePath" }}'>Edit source</a> {{ end }}
 </p>
+{{ end }}
